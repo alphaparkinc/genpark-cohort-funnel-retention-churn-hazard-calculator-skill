@@ -1,0 +1,41 @@
+{
+  "name": "genpark-cohort-funnel-retention-churn-hazard-calculator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Behavioral cohort funnel retention and churn hazard rate calculator evaluating Kaplan-Meier survival curves and LTV decay.",
+  "author": "genpark",
+  "category": "product-analytics",
+  "tags": [
+    "cohort-analysis",
+    "retention-calculator",
+    "churn-hazard",
+    "kaplan-meier",
+    "product-analytics"
+  ],
+  "inputs": {
+    "cohort_registration_month": {
+      "type": "string"
+    },
+    "active_users_sample_size": {
+      "type": "integer"
+    },
+    "tracking_intervals_weeks": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "cohort_analysis_id": {
+      "type": "string"
+    },
+    "day_30_retention_rate_pct": {
+      "type": "number"
+    },
+    "kaplan_meier_median_lifespan_days": {
+      "type": "integer"
+    },
+    "retention_matrix_heatmap_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
